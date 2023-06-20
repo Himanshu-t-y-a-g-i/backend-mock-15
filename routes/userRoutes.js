@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const express = require("express");
 const userRoutes = express.Router();
 
-userRoutes.post("/register", async (req, res) => {
+userRoutes.post("/signup", async (req, res) => {
     const { email, password } = req.body;
     if (!email, !password) {
         res.status(400).send({ msg: "invalid data format" });
